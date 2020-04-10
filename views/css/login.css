@@ -1,0 +1,643 @@
+@charset "utf-8";
+a,a:hover,a:active,a:link,a:visited{ text-decoration:none;outline: none;}
+input{outline:none; }
+button:active,button:link,button:visited,button:focus{text-decoration: none;outline: none;filter:chroma(color=#000000);}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: "微软雅黑";
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    border: none;
+}
+
+body {
+    min-width: 1280px;
+    background: url("../randombgpic")/*tpa=https://cas.nju.edu.cn/cas/randombgpic*/ no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.clear-150 {
+    height: 120px;
+    line-height: 120px;
+    clear: both
+}
+
+/* 登录 */
+.app-logo {
+    display: none
+}
+
+.login {
+    width: 462px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top: -257.4px;
+    margin-left: -231px;
+}
+
+.login-bag {
+    height: auto;
+    padding: 30px 35px 30px 35px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+}
+
+.login-bag-title {
+    width: 90%;
+    padding: 0px 5%;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    font-weight: 500;
+    text-align: right;
+    background: url("../images/logo.png")/*tpa=https://cas.nju.edu.cn/cas/images/logo.png*/ no-repeat 5% top;
+    border-bottom: 1px #fff solid;
+    font-size: 28px;
+    font-family: "楷体_GB2312";
+}
+
+.login-bag-title-tck {
+    width: 90%;
+    padding: 0px 5%;
+    height: 40px;
+/*    line-height: 50px;*/
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    font-family: "楷体_GB2312";
+}
+
+.login-username {
+    width: 85%;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0 10% 0px 5%;
+    border: 1px #bcbcbc solid;;
+    outline: none;
+    background: #fff;
+}
+
+.input-box label span {
+    color: #bcbcbc;
+    float: left;
+    width: 35%;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 3px 0px 0px 3px;
+    background: #fff;
+}
+
+.input-box {
+    margin-top: 15px;
+    height: 42px;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px #bcbcbc solid
+}
+
+.login-password {
+    width: 85%;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0 10% 0px 5%;
+    border: 1px #bcbcbc solid;
+    outline: none;
+    background: #fff;
+}
+
+.input-box-yzm {
+    margin-top: 15px;
+    position: relative;
+    background: #ffffff;
+    border: 1px #bcbcbc solid;
+}
+
+/*验证码样式（非滑动模式）*/
+.login-yzm {
+    width: 65%;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0 30% 0px 5%;
+    border: 1px #bcbcbc solid;
+    outline: none;
+}
+
+#login-yzm {
+    background-color: #EFEFEF;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 0 3px 3px 0;
+    padding: 0 1% 0 0;
+    border: none;
+    outline: none;
+    color: #777;
+    font-size: 14px;
+}
+
+#yzm-panel {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background: url("../images/veri-bg.jpg")/*tpa=https://cas.nju.edu.cn/cas/images/veri-bg.jpg*/ no-repeat center;
+    bottom: 40px;
+    z-index: 999;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.input-box-yzm .refresh-icon {
+    background: url("../images/refresh.png")/*tpa=https://cas.nju.edu.cn/cas/images/refresh.png*/;
+    width: 24px;
+    height: 28px;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+
+.input-box-yzm .refresh-icon:hover {
+    background: url("../images/refresh-hover.png")/*tpa=https://cas.nju.edu.cn/cas/images/refresh-hover.png*/;
+    width: 24px;
+    height: 28px;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+
+#concave {
+    left: 277px;
+    top: 40px;
+    position: absolute;
+}
+
+#convex {
+    left: 5px;
+    top: 40px;
+    position: absolute;
+    background: url("../images/jigsaw-convex.png")/*tpa=https://cas.nju.edu.cn/cas/images/jigsaw-convex.png*/ no-repeat center;
+    width: 51px;
+    height: 50px;
+}
+
+#yzm-btn {
+    background: url("../images/slider-3.png")/*tpa=https://cas.nju.edu.cn/cas/images/slider-3.png*/ no-repeat;
+    width: 45px;
+    height: 42px;
+    position: absolute;
+
+}
+
+#yzm-btn:hover {
+    background: url("../images/slider-3-hover.png")/*tpa=https://cas.nju.edu.cn/cas/images/slider-3-hover.png*/ no-repeat;
+}
+
+#login-yzm2 {
+    display: none;
+}
+
+/*验证码图片（非滑动模式）*/
+.username {
+    position: absolute;
+    top: 12px;
+    right: 5%;
+}
+
+.password {
+    position: absolute;
+    top: 12px;
+    right: 5%;
+}
+
+.yzm {
+    position: absolute;
+    top: 5px;
+    right: 1%;
+}
+
+#yzm-note {
+    color: #777777;
+    width: 87%;
+    text-align: center;
+    float: right;
+}
+
+.login-submit-box {
+    width: 100%;
+    height: 85px;
+    margin-top: 15px;
+}
+
+.login-submit-box a {
+    display: inline-block;
+    width: 32%;
+    color: #fff;
+    font-size: 14px;
+}
+
+.login-submit-box a:nth-of-type(2) {
+    text-align: center
+}
+
+.login-submit-box a:nth-of-type(3) {
+    text-align: right
+}
+
+.login-submit-box span {
+    float: left;
+    width: 40%;
+    height: 42px;
+    line-height: 42px;
+    color: #66696c;
+    font-size: 14px;
+}
+
+.login-submit-box span input {
+    vertical-align: middle;
+
+}
+
+.submit_button {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #9b2d96;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit_button:hover {
+    background: #90138b;
+}
+
+.login-submit-box-forget {
+    width: 60%;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.login-submit-box-forget a {
+    font-size: 14px;
+    color: #14b9d6;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.slides {
+    width: 100%;
+    height: 410px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideInner {
+    height: 410px;
+    position: relative;
+    left: 0;
+    margin-left: 0;
+}
+
+.slideInner div {
+    display: block;
+    height: 410px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav {
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+.nav a {
+    display: block;
+    width: 41px;
+    height: 119px;
+    opacity: .2;
+    z-index: 9;
+}
+
+.nav a.prev {
+    position: absolute;
+    left: 0;
+    top: -200px;
+    margin-top: -58px;
+    background: url("../login-1")/*tpa=https://cas.nju.edu.cn/cas/pic/ban_pre.png*/ no-repeat;
+}
+
+.nav a.next {
+    position: absolute;
+    right: 0;
+    top: -200px;
+    margin-top: -58px;
+    background: url("../login-1")/*tpa=https://cas.nju.edu.cn/cas/pic/ban_next.png*/ no-repeat;
+}
+
+.navListBox {
+    position: absolute;
+    left: 50%;
+    top: 675px;
+    z-index: 99;
+}
+
+#form1 .error-box {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 5px;
+    padding: 0px 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    top: 17%;
+}
+
+#form1 .error-box span {
+    display: inline-block;
+    color: #FF0000;
+    font-size: 14px;
+}
+
+.dlxz {
+    margin: 0px auto;
+    width: 1180px;
+    height: 90px;
+    padding: 10px 0px 10px 100px;
+    background: url("../images/dlxz.png")/*tpa=https://cas.nju.edu.cn/cas/images/dlxz.png*/ no-repeat left center;
+    font-size: 12px;
+    color: #666;
+    clear: both;
+    position: relative;
+    top: 410px;
+}
+
+.dlxz div {
+    padding: 20px;
+}
+
+.oth_type_tit {
+    border: none;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    padding-bottom: 10px \9;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+}
+
+.oth_type_tit legend {
+    text-shadow: 1px 1px 0 #333;
+    color: #FFF;
+}
+
+.oth_type_links {
+    text-align: center;
+}
+
+.icon_type {
+    margin: 0 9.5%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*报错信息框架*/
+#login-error-1 {
+    display: none;
+    position: relative;
+}
+
+#login-error-2 {
+    display: none;
+    position: relative;
+}
+
+/*报错文字样式*/
+#error-note {
+    padding: 30px 20px 0 20px;
+    color: #fff;
+}
+
+#error-back {
+    color: #499da1;
+    padding-bottom: 1px;
+    border-bottom: 1px #499da1 solid;
+}
+
+/*验证码文字样式*/
+#veri-code {
+    font-size: 14px;
+    color: #777;
+}
+
+.btn_qq i {
+    background: url("../pic/icons_type.png")/*tpa=https://cas.nju.edu.cn/cas/pic/icons_type.png*/ no-repeat -15px center;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.btn_weibo i {
+    background: url("../pic/icons_type.png")/*tpa=https://cas.nju.edu.cn/cas/pic/icons_type.png*/ no-repeat -95px center;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.btn_weixin i {
+    background: url("../pic/icons_type.png")/*tpa=https://cas.nju.edu.cn/cas/pic/icons_type.png*/ no-repeat -175px center;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+#login-type-2 {
+    display: none;
+    position: relative
+}
+
+#login-type-2 img {
+    width: 70%;
+    height: 70%;
+    border: 1px #fff solid;
+    padding: 10px;
+}
+
+#login-type-2 #close-ewm {
+    position: absolute;
+    right: 0px;
+    top: 0%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: rgba(101, 101, 101, 0.5);
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+#login-type-2 .ewm-text {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff
+}
+
+.clear-1 {
+    clear: both;
+    height: 10px;
+    line-height: 10px;
+    font-size: 1px;
+}
+
+.clear-2 {
+    clear: both;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1px;
+}
+
+.slides {
+    width: 100%;
+    height: 410px;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    z-index: 0
+}
+
+.slideInner {
+    height: 410px;
+    position: relative;
+    left: 0;
+    margin-left: 0;
+}
+
+.slideInner a {
+    display: block;
+    height: 410px;
+    min-width: 1260px !important;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.app-banner {
+    display: none
+}
+
+.app-mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999
+}
+
+#weixin-web {
+    display: inline-block
+}
+
+#weixin-app {
+    display: none
+}
+
+.error-tip {
+    padding-top: 100px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center
+}
+
+.error-tip a {
+    color: #fff
+}
+
+.error-tip-app {
+    padding-bottom: 20px;
+    line-height: 40px;
+    color: #333;
+    text-align: center
+}
+
+.error-tip-app a {
+    color: #333
+}
+
+/*增加：为处理输入框是黄色问题，小孟让加的样式*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: #000;
+}
+
+@media screen and (max-width: 500px) {
+    html, body {
+        height: 100%;
+        min-height: 640px;
+        min-width: 100%;
+    }
+
+    .icon_type {
+        margin: 0 6%;
+    }
+
+    .login-bag {
+        padding: 20px 20px 20px 20px;
+    }
+
+    .login-bag-title {
+        height: 62px;
+        line-height: 62px;
+        background-size: 50%;
+        font-size: 20px;
+    }
+
+    .login-bag-title-tck {
+        font-size: 26px;
+        height: 35px;
+    }
+
+
+    .login {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -45%;
+        margin-top: -238.4px;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CloudCoding-Editor</title>
+	<link rel="shortcut icon"	href="../../images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="./app.js"></script>
+	
+	
+	<script type="text/javascript">		/*显示隐藏输出框*/
+	
+	function display(id){ 
+	var traget=document.getElementById(id); 
+	if(traget.style.display=="none"){ 
+	traget.style.display=""; 
+	}else{ 
+	traget.style.display="none"; 
+	} 
+	} 
+	</script>
+	
+</head>
+
+<body>
+    <div id="header">语言选择
+        <select class="language">
+			<option>abap</option>
+            <option>apex</option>
+            <option>azcli</option>
+            <option>bat</option>
+            <option>clojure</option>
+            <option>coffee</option>
+            <option>cpp</option>
+            <option>csharp</option>
+            <option>csp</option>
+            <option>css</option>
+            <option>dockerfile</option>
+            <option>fsharp</option>
+            <option>go</option>
+            <option>graphql</option>
+            <option>handlebars</option>
+            <option>html</option>
+            <option>ini</option>
+            <option>java</option>
+            <option>javascript</option>
+            <option>json</option>
+            <option>kotlin</option>
+            <option>less</option>
+            <option>lua</option>
+            <option>markdown</option>
+            <option>msdax</option>
+            <option>mysql</option>
+            <option>objective-c</option>
+            <option>pascal</option>
+            <option>perl</option>
+            <option>pgsql</option>
+            <option>php</option>
+            <option>plaintext</option>
+            <option>postiats</option>
+            <option>powerquery</option>
+            <option>powershell</option>
+            <option>pug</option>
+            <option selected>python</option>
+            <option>r</option>
+            <option>razor</option>
+            <option>redis</option>
+            <option>redshift</option>
+            <option>ruby</option>
+            <option>rust</option>
+            <option>sb</option>
+            <option>scheme</option>
+            <option>scss</option>
+            <option>shell</option>
+            <option>sol</option>
+            <option>sql</option>
+            <option>st</option>
+            <option>swift</option>
+            <option>tcl</option>
+            <option>typescript</option>
+            <option>vb</option>
+            <option>xml</option>
+            <option>yaml</option>
+        </select>
+		<input type="submit" value="显示框" onclick="display('lb')"></div>
+    <div id="root"></div>
+	
+	
+	
+	<div id="lb" style="display:inline">
+		<div class="content">iput_text</div>
+		<div class="footer" id="footer" style="text-align: left">
+        </div>
+	</div>
+	
+
+</body>
+
+
+</html>
